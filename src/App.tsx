@@ -10,11 +10,9 @@
 
 import React, {useCallback} from 'react';
 import {ActivityIndicator, FlatList, SafeAreaView} from 'react-native';
-import IsLoadingContext, {useIsLoadingState} from './context/isLoading';
+import IsLoadingContext from './context/isLoading';
 import DictionaryContext from './context/dictionary';
-import IndexListContext, {useIndexListState} from './context/indexList';
-import {useSetup} from './hooks/setup';
-import {ListItem} from './components/listItem';
+import IndexListContext from './context/indexList';
 
 const App: React.VFC = () => {
   return (
@@ -31,10 +29,13 @@ const App: React.VFC = () => {
 export default App;
 
 const Screen: React.VFC = () => {
+  const useSetup = require('./hooks/setup').useSetup;
   useSetup();
 
-  const {isLoading} = useIsLoadingState();
-  const {list} = useIndexListState();
+  const {isLoading} = require('./context/isLoading').useIsLoadingState();
+  const {list} = require('./context/indexList').useIndexListState();
+
+  const ListItem = require('./components/listItem').ListItem;
 
   const renderItem = useCallback(
     ({item, index}: {item: string; index: number}) => (
@@ -56,6 +57,8 @@ const Screen: React.VFC = () => {
     );
   }
 
+  const Contents = require('./components/contents').Contents;
+
   return (
     <SafeAreaView>
       <FlatList
@@ -63,6 +66,7 @@ const Screen: React.VFC = () => {
         extraData={list}
         keyExtractor={keyExtractor}
         renderItem={renderItem}
+        ListHeaderComponent={Contents}
       />
     </SafeAreaView>
   );
