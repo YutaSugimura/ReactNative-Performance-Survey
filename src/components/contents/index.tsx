@@ -1,12 +1,13 @@
 import React from 'react';
 import {View} from 'react-native';
-import {ContentsOne} from './contentsOne';
-import {ContentsTwo} from './contentsTwo';
-import {ContentsThree} from './contentsThree';
-import {ContentsFour} from './contentsFour';
-import {ContentsFive} from './contentsFive';
 
 export const Contents: React.VFC = () => {
+  const ContentsOne = require('./contentsOne').ContentsOne;
+  const ContentsTwo = require('./contentsTwo').ContentsTwo;
+  const ContentsThree = require('./contentsThree').ContentsThree;
+  const ContentsFour = require('./contentsFour').ContentsFour;
+  const ContentsFive = require('./contentsFive').ContentsFive;
+
   return (
     <View>
       <ContentsOne />

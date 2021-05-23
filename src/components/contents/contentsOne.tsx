@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {Button, Text, View} from 'react-native';
-import {useCounterCore} from '../../hooks/counter';
 
 type Props = {};
 
 export const ContentsOne: React.VFC<Props> = () => {
   const [state, setState] = useState<string>('');
-  const {count, increment, decrement} = useCounterCore();
+  const {count, increment, decrement} =
+    require('../../hooks/counter').useCounterCore();
 
   useEffect(() => {
     let isMounted = true;
