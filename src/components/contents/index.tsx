@@ -1,5 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
+import {StartupTime} from 'react-native-startup-time';
 
 export const Contents: React.VFC = () => {
   const ContentsOne = require('./contentsOne').ContentsOne;
@@ -10,6 +11,7 @@ export const Contents: React.VFC = () => {
 
   return (
     <View>
+      <StartupTime />
       <ContentsOne />
       <ContentsTwo />
       <ContentsThree />

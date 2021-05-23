@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "react": "17.0.1",
-    "react-native": "0.64.1"
+    "react-native": "0.64.1",
+    "react-native-startup-time": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
