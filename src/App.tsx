@@ -14,6 +14,7 @@ import IsLoadingContext, {useIsLoadingState} from './context/isLoading';
 import DictionaryContext from './context/dictionary';
 import IndexListContext, {useIndexListState} from './context/indexList';
 import {useSetup} from './hooks/setup';
+import {Contents} from './components/contents';
 import {ListItem} from './components/listItem';
 
 const App: React.VFC = () => {
@@ -63,6 +64,7 @@ const Screen: React.VFC = () => {
         extraData={list}
         keyExtractor={keyExtractor}
         renderItem={renderItem}
+        ListHeaderComponent={Contents}
       />
     </SafeAreaView>
   );
