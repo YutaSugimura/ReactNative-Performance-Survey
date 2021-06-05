@@ -3,20 +3,20 @@ import {View} from 'react-native';
 import {StartupTime} from 'react-native-startup-time';
 
 export const Contents: React.VFC = () => {
-  const ContentsOne = require('./contentsOne').ContentsOne;
-  const ContentsTwo = require('./contentsTwo').ContentsTwo;
-  const ContentsThree = require('./contentsThree').ContentsThree;
-  const ContentsFour = require('./contentsFour').ContentsFour;
-  const ContentsFive = require('./contentsFive').ContentsFive;
+  const ContentOne = require('./contentOne').ContentOne;
+  const ContentTwo = require('./contentTwo').ContentTwo;
+  const ContentThree = require('./contentThree').ContentThree;
+  const ContentFour = require('./contentFour').ContentFour;
+  const ContentFive = require('./contentFive').ContentFive;
 
   return (
     <View>
       <StartupTime />
-      <ContentsOne />
-      <ContentsTwo />
-      <ContentsThree />
-      <ContentsFour />
-      <ContentsFive />
+      <ContentOne />
+      <ContentTwo />
+      <ContentThree />
+      <ContentFour />
+      <ContentFive />
     </View>
   );
 };

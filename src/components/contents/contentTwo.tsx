@@ -3,7 +3,7 @@ import {Text, View} from 'react-native';
 
 type Props = {};
 
-export const ContentsTwo: React.VFC<Props> = () => {
+export const ContentTwo: React.VFC<Props> = () => {
   return (
     <View>
       <Text>Contents Two</Text>
