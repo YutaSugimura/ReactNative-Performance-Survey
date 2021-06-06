@@ -44,3 +44,13 @@ I won't know the exact size until I upload it to the App Store.
 
 #### Hermes Engine
 118.3MB
+
+## Execution time comparison between conventional engine and hermes(ios)
+10 trials of a simple prime number calculation
+
+#### Hermes
+![Hermes](https://user-images.githubusercontent.com/44302124/120883051-fdd2de00-c615-11eb-9094-8669454013d1.png)
+#### Conventional Engine
+![Conventional](https://user-images.githubusercontent.com/44302124/120883212-d4668200-c616-11eb-92c8-c87dd6ca20cc.png)
+
+[target file](https://github.com/YutaSugimura/ReactNative-Performance-Survey/blob/main/src/hooks/measure.ts)
